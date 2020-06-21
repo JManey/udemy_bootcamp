@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Quiz</title>
+</head>
+
+<body>
+
+    <h1>Register</h1>
+
+    <form action="">
+
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" required>
+        <label for="LastName">Last Name:</label>
+        <input type="text" id="LastName">
+
+        <br>
+
+        <label for="male">Male</label>
+        <input type="radio" name="sex" value="Male" id="Male">
+        <label for="Female">Female</label>
+        <input type="radio" name="sex" value="Female" id="Female">
+        <label for="Other">Other</label>
+        <input type="radio" name="sex" value="Other" id="Other">
+
+        <br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+        <label for="password">Password:</label>
+        <input type="password" minlength="5" maxlength="16" required>
+
+        <br>
+
+        <label for="birthday">Birthday:</label>
+        <select name="month" id="">month
+            <option value="Month">Month</option>
+            <option value="Jan">Jan</option>
+            <option value="Feb">Feb</option>
+            <option value="Mar">Mar</option>
+        </select>
+        <select name="Day" id="">Day
+            <option value="Day">Day</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+        <select name="year" id="">year
+            <option value="Year">Year</option>
+            <option value="1985">1985</option>
+            <option value="1986">1986</option>
+            <option value="1987">1987</option>
+        </select>
+
+        <br>
+
+        <label for="agreed">I agree to blah blah blah: </label>
+        <input type="checkbox" id="agreed" name="agreed" required>
+
+        <br>
+
+        <input type="submit" name="submit" value="Submit!">
+    </form>
+
+</body>
+
+</html>
