@@ -1,0 +1,33 @@
+body {
+    background-color: lightsteelblue;
+}
+
+h1 {
+    font-family: Piedra, sans-serif;
+    margin-left: 1.66%;
+    text-transform: capitalize;
+    font-size: 44px;
+    border-bottom: 1px solid black;
+    width: 30%;
+    padding-bottom: 15px;
+}
+
+img {
+    width: 30%;
+    float: left;
+    margin: 1.66%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
