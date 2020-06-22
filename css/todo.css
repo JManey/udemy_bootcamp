@@ -1,0 +1,40 @@
+body {
+    background:  orange;
+}
+
+li {
+    border: 2px solid #030f43;
+    font-size: 18px;
+}
+
+#special {
+    background-color: saddlebrown;
+}
+
+.completed {
+    text-decoration: line-through;
+}
+
+* {
+    border: 1px solid fuchsia;
+}
+
+li a {
+    font-size: 28px;
+    color: rgba(65, 4, 209, 0.781);
+}
+
+h2 + ul {
+    border: 3px solid blue;
+}
+
+/* input[type="checkbox"] {
+    background-color: #203cb6;
+    color: #203cb6;
+    font-size: 22px;
+} */
+
+
+li:nth-of-type(2) {
+    background: green;
+}
