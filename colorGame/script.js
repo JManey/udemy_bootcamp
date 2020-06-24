@@ -70,7 +70,9 @@ resetBtn.addEventListener("click", function () {
   colors = generateRandomColors(numSquares);
   winningColor = pickColor();
   colorDisplay.textContent = winningColor;
+  messageDisplay.textContent = "";
   h1.style.backgroundColor = "steelblue";
+  this.textContent = "New Colors";
   for (i = 0; i < squares.length; i++) {
     squares[i].style.backgroundColor = colors[i];
   }
