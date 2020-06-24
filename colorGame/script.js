@@ -1,4 +1,5 @@
-let colors = generateRandomColors(6);
+let numSquares = 6;
+let colors = generateRandomColors(numSquares);
 //variables
 let winningColor = pickColor();
 
@@ -8,6 +9,8 @@ const colorDisplay = document.getElementById("colorDisplay");
 const messageDisplay = document.getElementById("message");
 const h1 = document.querySelector("h1");
 const resetBtn = document.getElementById("resetBtn");
+const easyBtn = document.getElementById("easyBtn");
+const hardBtn = document.getElementById("hardBtn");
 
 //loop through squares
 for (let i = 0; i < squares.length; i++) {
@@ -31,9 +34,38 @@ for (let i = 0; i < squares.length; i++) {
   });
 }
 
+//select game mode
+easyBtn.addEventListener("click", function () {
+  easyBtn.classList.add("selected");
+  hardBtn.classList.remove("selected");
+  numSquares = 3;
+  colors = generateRandomColors(numSquares);
+  winningColor = pickColor();
+  colorDisplay.textContent = winningColor;
+  for (i = 0; i < squares.length; i++) {
+    if (colors[i]) {
+      squares[i].style.backgroundColor = colors[i];
+    } else {
+      squares[i].style.display = "none";
+    }
+  }
+});
+hardBtn.addEventListener("click", function () {
+  hardBtn.classList.add("selected");
+  easyBtn.classList.remove("selected");
+  numSquares = 6;
+  colors = generateRandomColors(numSquares);
+  winningColor = pickColor();
+  colorDisplay.textContent = winningColor;
+  for (i = 0; i < squares.length; i++) {
+    squares[i].style.backgroundColor = colors[i];
+    squares[i].style.display = "block";
+  }
+});
+
 //reset button
 resetBtn.addEventListener("click", function () {
-  colors = generateRandomColors(6);
+  colors = generateRandomColors(numSquares);
   winningColor = pickColor();
   colorDisplay.textContent = winningColor;
   h1.style.backgroundColor = "#232323";
