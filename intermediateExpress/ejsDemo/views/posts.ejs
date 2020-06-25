@@ -1,0 +1,7 @@
+<%- include("partials/header") %>
+
+<h1>The posts page</h1>
+
+<% posts.forEach(post => { %>
+<li><%= post.title %> by: <%= post.author %></li>
+<% }) %> <%- include("partials/footer") %>
