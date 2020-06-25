@@ -1,24 +1,27 @@
-var circles = [];
+// import { Howl, Howler } from "howler";
 
-function onKeyDown(event) {
-  var maxPoint = new Point(view.size.width, view.size.height);
-  var randomPoint = Point.random();
-  var point = maxPoint * randomPoint;
-  // When a key is pressed, set the content of the text item:
-  var newCircle = new Path.Circle(point, 20);
-  newCircle.fillColor = "blue";
+// var circles = [];
 
-  circles.push(newCircle);
-}
+// var sound = new Howl({
+//   src: ["sounds/bubbles.mp3"],
+// });
 
-var animatedCircle = new Path.Circle(new Point(300, 300), 100);
-animatedCircle.fillColor = "red";
+// function onKeyDown(event) {
+//   sound.play();
+//   var maxPoint = new Point(view.size.width, view.size.height);
+//   var randomPoint = Point.random();
+//   var point = maxPoint * randomPoint;
+//   // When a key is pressed, set the content of the text item:
+//   var newCircle = new Path.Circle(point, 500);
+//   newCircle.fillColor = "blue";
 
-function onFrame(event) {
-  for (var i = 0; i < circles.length; i++) {
-    // console.log(circles[i]);
-    circles[i].fillColor.hue += 1;
-  }
-  animatedCircle.fillColor.hue += 1;
-  //   animatedCircle.scale(0.95);
-}
+//   circles.push(newCircle);
+// }
+
+// function onFrame(event) {
+//   for (var i = 0; i < circles.length; i++) {
+//     // console.log(circles[i]);
+//     circles[i].fillColor.hue += 1;
+//     circles[i].scale(0.98);
+//   }
+// }
