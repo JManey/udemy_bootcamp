@@ -1,0 +1,8 @@
+<h1>results page</h1>
+<% data.forEach(function(movie) { %>
+<img src="<%= movie.Poster  %>" alt="" />
+<h3><%= movie.Title %></h3>
+<ul>
+  <li><%= movie.Year %></li>
+</ul>
+<% }) %>

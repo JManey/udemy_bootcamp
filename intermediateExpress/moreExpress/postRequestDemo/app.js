@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const port = 3000;
 const bodyParser = require("body-parser");
+const axios = require('axios');
 
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -26,6 +27,8 @@ app.post("/addFriend", function (req, res) {
   friends.push(newFriend);
   res.redirect("/friends");
 });
+
+
 
 app.listen(port, () => {
   console.log(`server listening on port: ${port}`);
