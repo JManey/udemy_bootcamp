@@ -15,9 +15,9 @@ app.get("/", function (req, res) {
 app.get("/results", function (req, res) {
   // Make a request for a user with a given ID
   let query = req.query.search;
-  console.log(query);
+  let url = `http://www.omdbapi.com/?s=%22${query}%22&apikey=thewdb`;
   axios
-    .get(`http://www.omdbapi.com/?s=%22${query}%22&apikey=thewdb`)
+    .get(url)
     .then(function (response) {
       data = response.data.Search;
       //   console.log(data);
